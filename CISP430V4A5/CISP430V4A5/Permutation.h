@@ -39,7 +39,7 @@ class Permute
 {
 public:
 	Permute(string wordOne, string wordTwo);
-	void permutation();
+	void permutation(string firstWord);
 	void print();
 private:
 	string firstString;
