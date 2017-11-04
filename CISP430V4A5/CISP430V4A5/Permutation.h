@@ -16,9 +16,22 @@
 */
 
 /* void permutation()
-		Postcondition: The letters in the words will be mixed up in the appropriate manner and stored in a linked list.
+		Postcondition: Starts the permutation process. The letters in the words will be mixed up in the appropriate manner and stored in a linked list.
 		The first word is the only word to actually have its letters mixed up, the second is just appended to the end.
 		Calls itself to perform task until task is accomplished.
+*/
+
+/* void swap(int c1, int c2)
+		Postcondition: The positions of the two given characters in the first string will be swapped.
+*/
+
+/* void permutation(int currentPosition)
+		Postcondition: Recursively continues the permutation process. All possible permuations have been found and stored in a linked list.
+*/
+
+/* void print()
+		Postcondtion: The results of the permutation will be displayed to the user along with the total number of permutations and
+		the given strings.
 */
 
 /* void print()
@@ -39,7 +52,10 @@ class Permute
 {
 public:
 	Permute(string wordOne, string wordTwo);
+	~Permute();
 	void permutation();
+	void swap(int c1, int c2);
+	void permutation(int currentPosition);
 	void print();
 private:
 	string firstString;

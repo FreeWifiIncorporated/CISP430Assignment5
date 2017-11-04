@@ -15,13 +15,11 @@ using namespace std;
 class Node
 {
 public:
-	Node();
-	Node(const string word, const Node* source); // Node constructor.
-	void insert(string value);
-	string getData();
-	Node* getP();
+	Node(string word, Node* p); // Node constructor.
+	string getData(); // Function to return the value of data for the current node.
+	Node* link(); // Function to return the address of the next node in the list.
 private:
 	string data; // Holds the completed string for the current permutation.
-	Node* p; // Points to the next node in the 
+	Node* p; // Points to the next node in the list.
 };
 #endif
