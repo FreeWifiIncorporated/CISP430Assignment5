@@ -1,9 +1,6 @@
-/*
-	Nathan Yarrison
-	CISP 430
-	Assignment 5
-	11/1/2017
-*/
+// Christos Papadopoulos
+// CISP430V4A5.cpp
+
 // Driver file for the permutation header file.
 
 #include "Node.h"

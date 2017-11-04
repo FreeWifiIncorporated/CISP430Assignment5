@@ -1,9 +1,6 @@
-/*
-Nathan Yarrison
-CISP 430
-Assignment 5
-11/1/2017
-*/
+// Christos Papadopoulos
+// Node.cpp
+
 // Implementation file for the node class header file. 
 #include "Node.h"
 #include<string>

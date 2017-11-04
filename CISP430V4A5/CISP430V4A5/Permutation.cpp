@@ -1,9 +1,6 @@
-/*
-Nathan Yarrison
-CISP 430
-Assignment 5
-11/1/2017
-*/
+// Christos Papadopoulos
+// Permutation.cpp
+
 // Implementation file for the permute class in the permutation file.
 #include<cstdlib>
 #include<string>

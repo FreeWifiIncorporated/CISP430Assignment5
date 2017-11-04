@@ -1,9 +1,6 @@
-/*
-	Nathan Yarrison
-	CISP 430
-	Assignment 5
-	11/1/2017
-*/
+// Christos Papadopoulos
+// Node.h
+
 // Header file for the node class used by the permute class in the permutation file.
 
 #ifndef Node_H

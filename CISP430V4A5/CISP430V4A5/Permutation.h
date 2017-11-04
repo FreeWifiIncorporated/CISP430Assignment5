@@ -1,9 +1,6 @@
-/*
-	Nathan Yarrison
-	CISP 430
-	Assignment 5
-	11/1/2017
-*/
+// Christos Papadopoulos
+// Permutation.h
+
 // This is the header file that will contain the permutation class and the node class.
 // These will be used by the driver file to show all possible combinations of the letters
 // of two words. 
