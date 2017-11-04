@@ -16,24 +16,32 @@ Permute::Permute(string wordOne, string wordTwo)
 	lastNode = NULL; // The pointer to the last node is set to NULL.
 }
 
-void Permute::permutation(string firstWord, Node* currentNode)
+void Permute::permutation()
 {
 	// Function to permute (mix up) the letters in the words provided by the user/driver function.
 	// Only the first word is actually permuted, the second word is appended to every permutation of the first word.
 	// Calls itself to complete task until all permutations have been found.
 
-	string tempString = firstWord;
-	int wordLength = firstWord.length();
-
-	for (int i = 0; i < wordLength; ++i)
+	if (total == 0)
 	{
-		swap((tempString[i]), (tempString[wordLength - i]));
-		tempString.append(secondString);
-		Node newNode(tempString, currentNode);
-		Node* cNode = &newNode;
-		permutation(tempString, cNode);
-	}
+		lastNode = firstNode;
+		string tempString = firstString;
+		int wordLength = firstString.length();
 
+		for (int i = 0; i <= wordLength; ++i)
+		{
+			++total;
+			swap((tempString[i]), (tempString[wordLength - i]));
+			tempString.append(secondString);
+			firstNode->insert(tempString);
+			permutation();
+		}
+	}
+	else
+	{
+		Node* temp = new Node;
+		temp = lastNode;
+	}
 }
 
 void Permute::print()

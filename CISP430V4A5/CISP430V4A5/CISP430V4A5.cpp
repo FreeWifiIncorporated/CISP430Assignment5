@@ -6,14 +6,21 @@
 */
 // Driver file for the permutation header file.
 
-#include<iostream>
-#include<cstdlib>
-#include<string>
-#include"Permutation.h"
-
+#include "Node.h"
+#include "Permutation.h"
+#include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
-	// get input from user
+	Permute perm1("", "");
+
+	perm1.permutation();
+
+	perm1.print();
+	cout << endl << endl;
+
+	system("pause");
+	return 0;
 }

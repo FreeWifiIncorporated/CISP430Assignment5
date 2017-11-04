@@ -15,7 +15,9 @@ using namespace std;
 class Node
 {
 public:
+	Node();
 	Node(const string word, const Node* source); // Node constructor.
+	void insert(string value);
 	string getData();
 	Node* getP();
 private:
