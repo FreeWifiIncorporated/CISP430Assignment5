@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Permutation.cpp" />
+    <ClCompile Include="CISP430V4A5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

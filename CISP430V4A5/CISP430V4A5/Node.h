@@ -15,7 +15,6 @@ using namespace std;
 class Node
 {
 public:
-	Node();
 	Node(const string word, const Node* source); // Node constructor.
 private:
 	string data; // Holds the completed string for the current permutation.
