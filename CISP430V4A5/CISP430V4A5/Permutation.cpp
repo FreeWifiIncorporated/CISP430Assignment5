@@ -16,7 +16,7 @@ Permute::Permute(string wordOne, string wordTwo)
 	lastNode = NULL; // The pointer to the last node is set to NULL.
 }
 
-void Permute::permutation(string firstWord, Node currentNode)
+void Permute::permutation(string firstWord, Node* currentNode)
 {
 	// Function to permute (mix up) the letters in the words provided by the user/driver function.
 	// Only the first word is actually permuted, the second word is appended to every permutation of the first word.
@@ -30,7 +30,8 @@ void Permute::permutation(string firstWord, Node currentNode)
 		swap((tempString[i]), (tempString[wordLength - i]));
 		tempString.append(secondString);
 		Node newNode(tempString, currentNode);
-		permutation(tempString, newNode);
+		Node* cNode = &newNode;
+		permutation(tempString, cNode);
 	}
 
 }
@@ -41,13 +42,50 @@ void Permute::print()
 	// If the total is less than 100, print in 4 columns.
 	// If the total is greater than or equal to 100, print in 9 columns.
 
+	int numberInRow = 0; // Keeps track of how many nodes have been displayed in the current row.
+	Node* temp;
+	temp = firstNode;
+
 	// Check if total is greater than 100.
 	if (total < 100)
 	{
 		// If it is, display nodes in rows of four.
-		int numberInRow = 0; // Keeps track of how many nodes have been displayed in the current row.
 
-		cout >> firstNode.data 
+		while (temp <= lastNode)
+		{
+			string data = temp->getData();
+			temp = temp->getP();
 
+			if (numberInRow != 4)
+			{
+				cout << data << " ";
+				++numberInRow;
+			}
+			else
+			{
+				cout << endl << data << " ";
+				numberInRow = 1;
+			}
+		}
+	}
+	else
+	{
+		// The total is greater than 100, display nodes in rows of nine.
+		while (temp <= lastNode)
+		{
+			string data = temp->getData();
+			temp = temp->getP();
+
+			if (numberInRow != 9)
+			{
+				cout << data << " ";
+				++numberInRow;
+			}
+			else
+			{
+				cout << endl << data << " ";
+				numberInRow = 1;
+			}
+		}
 	}
 }

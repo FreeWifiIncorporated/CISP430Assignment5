@@ -15,8 +15,9 @@ using namespace std;
 class Node
 {
 public:
-	Node();
 	Node(const string word, const Node* source); // Node constructor.
+	string getData();
+	Node* getP();
 private:
 	string data; // Holds the completed string for the current permutation.
 	Node* p; // Points to the next node in the 
